@@ -78,14 +78,14 @@ const lightPrimary = createColors(lime, "primary", false);
 
 # 🤔 Questions
 
-- *Can I have different colors for light and dark mode?*  
+- ***Can I have different colors for light and dark mode?***  
    For sure! `lightTheme` and `darkTheme` are two separate objects and you can customize them however you want.
   
-- *Can I prevent some colors from being changed and use Strapi colors?*  
+- ***Can I prevent some colors from being changed and use Strapi colors?***  
    Of Course! just omit the color set from theme object and you are good to go:
   ```js
   export const darkTheme = {
-    // ...darkNeutral, neutral colors are not included in the object, so the admin panel will use strapi orignal colors.
+    // ...darkNeutral, neutral colors are not included in the object, so the admin panel will use strapi original colors.
     ...darkPrimary,
     ...darkSecondary,
     ...darkAlternative,
@@ -98,7 +98,7 @@ const lightPrimary = createColors(lime, "primary", false);
   ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/7f7b4f91-456d-4f18-ba5a-ef2a30ad8a9e)
 
   
-- *Can I have dark menus in light theme and vice versa?*  
+- ***Can I have dark menus in light theme and vice versa?***  
    Certainly! You can do it by calling the `createColors` function with `isDarkTrue: true` for light colors and the other way round:
   ```js
   const lightPrimary = createColors(rose, "primary", true);
@@ -109,10 +109,10 @@ const lightPrimary = createColors(lime, "primary", false);
   ```
    ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/caa3f600-4f18-4feb-a255-67826e8864b7)
 
-- *Does it support plugins in admin panel?*  
+- ***Does it support plugins in admin panel?***  
   Yes! Albeit if the plugin follows the strapi guidlines and uses the strapi design system for its interface.
   
   ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/7ddca923-2474-44be-95bf-9de6ea405163)
-  ☝ The screenshot above is for my Strapi plugin, Content-type Explorer. Check it out on [GitHub](https://github.com/ShahriarKh/strapi-content-type-explorer) or [Strapi Marketplace](https://market.strapi.io/plugins/strapi-content-type-explorer)!
+  👆 The screenshot above is for my Strapi plugin, Content-type Explorer. Check it out on [GitHub](https://github.com/ShahriarKh/strapi-content-type-explorer) or [Strapi Marketplace](https://market.strapi.io/plugins/strapi-content-type-explorer)!
 
 
