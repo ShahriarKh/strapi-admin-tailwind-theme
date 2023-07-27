@@ -348,18 +348,13 @@ const createColors = (color, name, isDarkTheme = true) => {
   return obj;
 };
 
-const createButtonColors = (color, isDarkTheme = true) => {
-  return isDarkTheme
-    ? {
-        buttonNeutral0: "black",
-        buttonPrimary500: color[`c${darkMapper["500"]}`],
-        buttonPrimary600: color[`c${darkMapper["600"]}`],
-      }
-    : {
-        buttonNeutral0: color["c50"],
-        buttonPrimary500: color[`c${lightMapper["500"]}`],
-        buttonPrimary600: color[`c${lightMapper["600"]}`],
-      };
+const createButtonColors = (color) => {
+  // since 500, 600 is in the middle, the color combination will look good on both dark and light themes
+  return {
+    buttonNeutral0: color["c50"],
+    buttonPrimary500: color["c500"],
+    buttonPrimary600: color["c600"],
+  };
 };
 
 const darkNeutral = createColors(zinc, "neutral");
@@ -378,7 +373,7 @@ const lightAlternative = createColors(blue, "alternative", false);
 const lightWarning = createColors(amber, "warning", false);
 const lightSuccess = createColors(emerald, "success", false);
 const lightDanger = createColors(rose, "danger", false);
-const lightButtons = createButtonColors(blue, false);
+const lightButtons = createButtonColors(blue);
 
 export const darkTheme = {
   ...darkNeutral,
