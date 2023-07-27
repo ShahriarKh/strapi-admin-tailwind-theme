@@ -1,11 +1,13 @@
 # 🎨 Strapi Admin Tailwind Theme
 Create your favorite theme for Strapi admin panel using Tailwind colors!
 
+
 # 📷 Examples
 | | |
 | --- | --- |
 | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9f38822-15d5-4f4e-99d7-3e3dac10c836) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9d49559-e82d-4c5d-8f76-5c88c386f2ea) |
 | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/d8cad609-0049-48c5-9795-dd1be2345be1) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/19dd5103-4f85-4530-9fba-f82bda34ee09)
+
 
 # 🔨 Installation
 1. Go to `src/admin` and create `app.js` if you haven't already done that.
@@ -41,10 +43,11 @@ Create your favorite theme for Strapi admin panel using Tailwind colors!
 6. Rebuild admin panel.
 7. Enjoy!
 
+
 # 🖌 Customization
 This extension replaces [Strapi Design System colors](https://design-system-git-main-strapijs.vercel.app/?path=/story/design-system-components-theme--dark-colors) with [Tailwind colors](https://tailwindcss.com/docs/customizing-colors).
 
-Inside `theme.js` you'll see a bunch of colors plus some functions. At the end of the file, there are two exported objects: `darkTheme` and `lightTheme`. Each object containts other objects (say "color sets") that replace colors of different parts of strapi colors; for example, `darkWarning` will replace all `warning` colors in dark mode and `lightSuccess` will replace all `success` colors in light mode.  
+Inside `theme.js` you'll see a bunch of colors plus some functions. At the end of the file, there are two exported objects: `darkTheme` and `lightTheme`. Each object contains other objects (say "color sets") that replace colors of different parts of strapi colors; for example, `darkWarning` will replace all `warning` colors in dark mode and `lightSuccess` will replace all `success` colors in light mode.  
 But how are these defined at the first place?
 
 Every color set can be defined with the following syntax:
@@ -66,21 +69,36 @@ const lightPrimary = createColors(blue, "primary", false);
 const lightPrimary = createColors(lime, "primary", false);
 ```
 
+
 # 🤔 Questions
 - *Can I have different colors for light and dark mode?*  
    For sure! `lightTheme` and `darkTheme` are two separate objects and you can customize them however you want.
+  
 - *Can I prevent some colors from being changed and use Strapi colors?*  
-   Yes! just omit the color set from theme object and you are good to go. Example:
+   Yes! just omit the color set from theme object and you are good to go:
   ```js
   export const darkTheme = {
-    ...darkNeutral,
+    // ...darkNeutral, neutral colors are not included in the object, so the admin panel will use strapi orignal colors.
     ...darkPrimary,
     ...darkSecondary,
     ...darkAlternative,
-    // ...darkWarning, warning, success and danger colors are not included in the theme, so strapi will use its original colors
-    // ...darkSuccess,
-    // ...darkDanger,
+    ...darkWarning,
+    ...darkSuccess,
+    ...darkDanger,
     ...darkButtons,
   };
   ```
+  ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/7f7b4f91-456d-4f18-ba5a-ef2a30ad8a9e)
+
+  
+- *Can I have dark menus in light theme and vice versa?*  
+   Of Course! You can do it by calling the `createColors` function with `isDarkTrue: true` for light colors and the other way round:
+  ```js
+  const lightPrimary = createColors(rose, "primary", true);
+  ```
+   ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/a19b9065-c9d3-427c-9cb7-893d42f1055c)
+  ```js
+  const lightPrimary = createColors(rose, "primary", false);
+  ```
+   ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/caa3f600-4f18-4feb-a255-67826e8864b7)
 
