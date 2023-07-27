@@ -1,5 +1,6 @@
 # 🎨 Strapi Admin Tailwind Theme
-Create your favorite theme for Strapi admin panel using Tailwind colors!
+Create your favorite theme for Strapi admin panel using Tailwind colors!  
+Plaese don't forget to give it a star if you liked it 🙂⭐
 
 
 # 📷 Examples
@@ -8,8 +9,10 @@ Create your favorite theme for Strapi admin panel using Tailwind colors!
 | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9f38822-15d5-4f4e-99d7-3e3dac10c836) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9d49559-e82d-4c5d-8f76-5c88c386f2ea) |
 | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/d8cad609-0049-48c5-9795-dd1be2345be1) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/19dd5103-4f85-4530-9fba-f82bda34ee09)
 
+---
 
 # 🔨 Installation
+
 1. Go to `src/admin` and create `app.js` if you haven't already done that.
 2. Create `extensions` folder inside `src/admin`.
 3. Copy `theme.js` file  from repo and paste it in `src/admin/extensions`.
@@ -43,8 +46,10 @@ Create your favorite theme for Strapi admin panel using Tailwind colors!
 6. Rebuild admin panel.
 7. Enjoy!
 
+---
 
 # 🖌 Customization
+
 This extension replaces [Strapi Design System colors](https://design-system-git-main-strapijs.vercel.app/?path=/story/design-system-components-theme--dark-colors) with [Tailwind colors](https://tailwindcss.com/docs/customizing-colors).
 
 Inside `theme.js` you'll see a bunch of colors plus some functions. At the end of the file, there are two exported objects: `darkTheme` and `lightTheme`. Each object contains other objects (say "color sets") that replace colors of different parts of strapi colors; for example, `darkWarning` will replace all `warning` colors in dark mode and `lightSuccess` will replace all `success` colors in light mode.  
@@ -69,13 +74,15 @@ const lightPrimary = createColors(blue, "primary", false);
 const lightPrimary = createColors(lime, "primary", false);
 ```
 
+---
 
 # 🤔 Questions
+
 - *Can I have different colors for light and dark mode?*  
    For sure! `lightTheme` and `darkTheme` are two separate objects and you can customize them however you want.
   
 - *Can I prevent some colors from being changed and use Strapi colors?*  
-   Yes! just omit the color set from theme object and you are good to go:
+   Of Course! just omit the color set from theme object and you are good to go:
   ```js
   export const darkTheme = {
     // ...darkNeutral, neutral colors are not included in the object, so the admin panel will use strapi orignal colors.
@@ -92,7 +99,7 @@ const lightPrimary = createColors(lime, "primary", false);
 
   
 - *Can I have dark menus in light theme and vice versa?*  
-   Of Course! You can do it by calling the `createColors` function with `isDarkTrue: true` for light colors and the other way round:
+   Certainly! You can do it by calling the `createColors` function with `isDarkTrue: true` for light colors and the other way round:
   ```js
   const lightPrimary = createColors(rose, "primary", true);
   ```
@@ -101,4 +108,11 @@ const lightPrimary = createColors(lime, "primary", false);
   const lightPrimary = createColors(rose, "primary", false);
   ```
    ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/caa3f600-4f18-4feb-a255-67826e8864b7)
+
+- *Does it support plugins in admin panel?*  
+  Yes! Albeit if the plugin follows the strapi guidlines and uses the strapi design system for its interface.
+  
+  ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/7ddca923-2474-44be-95bf-9de6ea405163)
+  ☝ The screenshot above is for my Strapi plugin, Content-type Explorer. Check it out on [GitHub](https://github.com/ShahriarKh/strapi-content-type-explorer) or [Strapi Marketplace](https://market.strapi.io/plugins/strapi-content-type-explorer)!
+
 
