@@ -1,13 +1,21 @@
 # 🎨 Strapi Admin Tailwind Theme
-Create your favorite theme for Strapi admin panel using Tailwind colors!  
-Plaese don't forget to give it a star if you liked it 🙂⭐
+Create your favorite theme for Strapi admin panel using Tailwind colors.
+
+`109,751,747,072` possible combinations!
+
+*Plaese don't forget to give it a star if you liked it 🙂⭐*
 
 
 # 📷 Examples
-| | |
-| --- | --- |
-| ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9f38822-15d5-4f4e-99d7-3e3dac10c836) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9d49559-e82d-4c5d-8f76-5c88c386f2ea) |
+| | | |
+| --- | --- | --- |
+| ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9f38822-15d5-4f4e-99d7-3e3dac10c836) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/e9d49559-e82d-4c5d-8f76-5c88c386f2ea)
 | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/d8cad609-0049-48c5-9795-dd1be2345be1) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/19dd5103-4f85-4530-9fba-f82bda34ee09)
+| ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/71fcd76d-1d96-4328-b6e1-60bea13fcb0b) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/4577ab9b-dfec-4310-b732-066686024acf) 
+| ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/526d17a0-5940-45ee-87a4-3c5bfa6b0ecd) | ![image](https://github.com/ShahriarKh/strapi-admin-tailwind-theme/assets/31452340/209e9841-1137-485b-99e4-99879b0f6b2b)
+
+
+
 
 ---
 
